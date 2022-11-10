@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Infosec</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static '/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static '/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header --> 
+			<header id="header">
+				<a href="index.html" class="title">Infosec</a>
+				<nav>
+					<ul>
+						<li><a href="{%url 'home' %}">Home</a></li>
+						<li><a href="generic.html" class="active">Clickjacking</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">click jacking checker</h1>
+							<ul>
+								<li>Clickjacking is an attack that tricks a user into clicking a webpage element which is invisible or disguised as another element.</li>
+								<li>This can cause users to unwittingly download malware, visit malicious web pages, provide credentials or sensitive information, transfer money, or purchase products online.</li>
+								<li>The user believes they are clicking the visible page but in fact they are clicking an invisible element in the additional page transposed on top of it.</li>
+								<li>If the user at some point is suspecious about the websites unusual behaviour ,he/she can visit our website and paste the website url
+									and get the detailed report on the urls masked under a website.</li>
+							</ul>
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                <label for="clickjacking">enter the url</label>
+                                <input type="text" name="clickjacking" id="clickjacking">
+                                <br>
+                                <input type="submit">
+                            </form>
+                            
+                            {% if user  %}
+                                <h2>{{ans}}</h2>
+
+                                <br>
+                               
+                                
+                                {% for i in ans2 %}
+                                <ul>
+                                    <li>{{i}}</li>
+                                </ul>
+                                    
+                                {% endfor %}
+                                
+                            {% endif %}
+
+
+						
+							
+						</div>
+					</section>
+					
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static '/js/jquery.min.js' %}"></script>
+			<script src="{% static '/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static '/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static '/js/browser.min.js' %}"></script>
+			<script src="{% static '/js/breakpoints.min.js' %}"></script>
+			<script src="{% static '/js/util.js' %}"></script>
+			<script src="{% static '/js/main.js' %}"></script>
+
+	</body>
+</html>

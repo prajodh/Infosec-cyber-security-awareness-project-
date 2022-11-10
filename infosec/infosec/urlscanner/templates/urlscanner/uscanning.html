@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Infosec</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static '/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static '/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header --> 
+			<header id="header">
+				<a href="index.html" class="title">Infosec</a>
+				<nav>
+					<ul>
+						<li><a href="{%url 'home' %}">Home</a></li>
+						<li><a href="generic.html" class="active">Url Vulnerability Scanner</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major"> Url Vulnerability Scanner </h1>
+							<ul>
+								<li>Every day we come across so many urls , unknowingly we visit them</li>
+								<li>In order to check the suspicious urls , place the url below to know how vulnerable the url is.</li>
+								<li>Some urls might possess some highly risky scripts which might sneak into your pc unknowingly</li>
+								<li>After the submitting the suspicious url below we display a complete report for the url .</li>
+								<li>the report will go through all the anti virus platforms to provide a satisfying result.</li>
+							</ul>
+                            <form class="inner" action="" method="POST">
+                                {% csrf_token %}
+                                <label for="urlscanner">enter the url you want to scan</label>
+                                <input type="text" name="urlscanner" id="urlscanner">
+                                <br>
+                                <input type="submit">
+                            </form>
+                           
+                            {% if user %}
+                             <ul class="inner">
+                                {% for k,v in results.items %}
+                                    <h3>{{k}}</h3>
+                                    <h4>detected : {{v.detected}}<h4>
+                                    <h4>results : {{v.result}}<h4>
+									<br>
+        
+                                {% endfor %}
+                                
+                            </ul>
+                            {% endif %} 
+						 
+							
+						</div>
+					</section>
+					
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static '/js/jquery.min.js' %}"></script>
+			<script src="{% static '/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static '/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static '/js/browser.min.js' %}"></script>
+			<script src="{% static '/js/breakpoints.min.js' %}"></script>
+			<script src="{% static '/js/util.js' %}"></script>
+			<script src="{% static '/js/main.js' %}"></script>
+
+	</body>
+</html>

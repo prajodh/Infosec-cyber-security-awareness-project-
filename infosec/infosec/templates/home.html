@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static '/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static '/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							
+							<li><a href="#one">vulnerablities</a></li>
+							<li><a href="#two">encryting techniques</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>InfoSec</h1>
+						<ul>
+							<li>A website designed to give visitors a detailed view on cyber security concepts .
+							</li>
+							<li>
+								This project manifests the idea of how vulnerable a person can be in this digital era.
+							</li>
+							<li>Millions of users are exposed to attacks that leverage vulnerabilities. Detecting and preventing installation programs from getting into 	your network and being used to propagate vulnerabilities is one of the top cybersecurity best practices.</li>
+						</ul>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
+
+					
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="{% static 'images/FileScan.jpg' %}" alt="Not displaying"  width="500" height="600" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>File vulnerability Scanner</h2>
+									
+									<ul class="actions">
+										<li><a href="{% url 'urlscanner:filescanner'%}" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="{% static 'images/urlsca.jpg' %}" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Url vulnerability Scanner</h2>
+									<p></p>
+									<ul class="actions">
+										<li><a href="{%url 'urlscanner:urlscanner' %}" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="{% static 'images/ip.jpg' %}" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Ip Address Locator</h2>
+									<p></p>
+									<ul class="actions">
+										<li><a href="{%url 'urlscanner:ipaddress' %}" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="{% static 'images/cj.jpg' %}" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>clickjacking</h2>
+									<p></p>
+									<ul class="actions">
+										<li><a href="{%url 'urlscanner:clickjacking' %}" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+				<section id="two" class="wrapper style3 fade-up">
+					<div class="inner">
+							<h2> steganography </h2>
+							<p>Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination.</p>
+							<div class="features">
+							<section>
+								<span class="icon solid major fa-code"></span>
+								<h3>Using Images</h3>
+								<p> Encryting messages into image files using aes algorithm</p>
+								<ul class="actions">
+									<li><a href="{%url 'urlscanner:image_encrypt' %}" class="button">Learn more</a></li>
+								</ul>
+							</section>
+							<section>
+								<span class="icon solid major fa-lock"></span>
+								<h3>Using text files</h3>
+								
+							<p>Encryting text files of users using aes algorithm</p>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn more</a></li>
+							</ul>
+						</section>
+							
+						</div>
+						
+					</div>
+				</section>
+	
+
+				
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static '/js/jquery.min.js' %}"></script>
+			<script src="{% static '/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static '/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static '/js/browser.min.js' %}"></script>
+			<script src="{% static '/js/breakpoints.min.js' %}"></script>
+			<script src="{% static '/js/util.js' %}"></script>
+			<script src="{% static '/js/main.js' %}"></script>
+
+	</body>
+</html>
