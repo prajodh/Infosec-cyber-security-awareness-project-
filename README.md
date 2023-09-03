@@ -16,3 +16,21 @@ Infosec is a comprehensive platform designed to educate and assist users in iden
 - Threat Investigation: Infosec allows users to enter or upload URLs, IP addresses, and files for investigation. We use the VirusTotal API to scan and report the results, helping you identify potential threats.
 
 - Data Encryption: We prioritize your data privacy. Infosec employs safe encryption techniques such as image Steganography and file encryption using the AES algorithm to secure your sensitive information.
+
+## Technologies Used
+
+- Django: Our web framework of choice for building a robust and user-friendly interface.
+
+- SMTP: For handling email notifications and communication with users.
+
+- HTML, CSS, JavaScript: The fundamental web technologies for creating an interactive and visually appealing user experience.
+
+- SQLite: A lightweight and efficient database management system to store user data securely.
+
+- VirusTotal API: An essential tool for scanning and analyzing potential threats in files, URLs, and IP addresses.
+
+- Beautiful Soup: Used for web scraping and data extraction when necessary.
+
+- AES (Advanced Encryption Standard): A secure encryption algorithm employed to protect sensitive files.
+
+- HashLib and SHA256: Utilized for cryptographic operations and hashing of data.
